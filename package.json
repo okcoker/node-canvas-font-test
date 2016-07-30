@@ -1,0 +1,33 @@
+{
+  "name": "canvas-font-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "font-test.js",
+  "engines": {
+    "node": "6.1.0"
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "start-dev": "nodemon ./bin/www"
+  },
+  "devDependencies": {
+    "nodemon": "1.10.0"
+  },
+  "dependencies": {
+    "body-parser": "1.15.1",
+    "cookie-parser": "1.4.3",
+    "debug": "2.2.0",
+    "express": "4.14.0",
+    "jade": "1.11.0",
+    "morgan": "1.7.0",
+    "serve-favicon": "2.3.0",
+    "canvas": "git://github.com/okcoker/node-canvas.git#v1.3.10-registerFont"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/okcoker/node-canvas-font-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
