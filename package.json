@@ -20,8 +20,7 @@
     "express": "4.14.0",
     "jade": "1.11.0",
     "morgan": "1.7.0",
-    "serve-favicon": "2.3.0",
-    "canvas": "git://github.com/okcoker/node-canvas.git#v1.3.10-registerFont"
+    "serve-favicon": "2.3.0"
   },
   "repository": {
     "type": "git",
