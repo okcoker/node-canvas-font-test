@@ -25,12 +25,25 @@ router.get('/', function(req, res, next) {
     const fontHeight = 70;
     const padding = 10;
     const height = fonts.length * (fontHeight + padding);
+    const notFound = [];
 
     fonts.forEach((font) => {
+        if (!fs.statSync(font.src).isFile()) {
+            notFound.push(font);
+            return;
+        }
+
         Canvas.registerFont(font.src, {
             family: font.name
         });
     });
+
+    if (notFound.length) {
+        // Just use first font that isn't found
+        const font = notFound[0];
+        res.send(`${font.name} doesn't exist at ${font.src}`);
+        return;
+    }
 
     const canvas = new Canvas(700, height);
     const ctx = canvas.getContext('2d');
