@@ -1,1 +1,1 @@
-web: bash scripts/installCanvas.sh && npm start
+web: npm start
